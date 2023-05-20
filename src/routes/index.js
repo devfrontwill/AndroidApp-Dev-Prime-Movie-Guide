@@ -33,7 +33,7 @@ function Routes() {
 
                     drawerIcon: ({ focused, size, color }) => (
                         <MaterialCommunityIcons
-                            name={focused ? 'movie-open' : 'movie-outline' }
+                            name={focused ? 'movie-open' : 'movie-outline'}
                             size={size}
                             color={color}
                         />
@@ -42,21 +42,21 @@ function Routes() {
                 }}
 
             />
-            <Drawer.Screen 
-            name="Movies" 
-            component={Movies}
-            options={{
-                title: 'Meus filmes',
+            <Drawer.Screen
+                name="Movies"
+                component={Movies}
+                options={{
+                    title: 'Meus filmes',
 
-                drawerIcon: ({ focused, size, color }) => (
-                    <MaterialCommunityIcons 
-                    name={focused ? 'archive' : 'archive-outline'}
-                    size={size}
-                    color={color}
-                    />
-                )
+                    drawerIcon: ({ focused, size, color }) => (
+                        <MaterialCommunityIcons
+                            name={focused ? 'archive' : 'archive-outline'}
+                            size={size}
+                            color={color}
+                        />
+                    )
 
-            }}
+                }}
             />
         </Drawer.Navigator>
     )
