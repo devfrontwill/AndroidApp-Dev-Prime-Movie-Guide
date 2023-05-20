@@ -10,11 +10,11 @@ import { Feather } from '@expo/vector-icons';
 function Home() {
     return (
         <Container>
-            <Header title="React Prime" />
+            <Header title="Developer Prime" />
 
             <SearchContainer>
                 <Input 
-                placeholder="Ex Vingadores"
+                placeholder="Ex: Vingadores"
                 placeholderTextColor="#ddd"
                 />
 
