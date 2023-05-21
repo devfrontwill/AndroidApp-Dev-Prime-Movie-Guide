@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView } from 'react-native';
-
 import { 
     Container, 
     SearchContainer, 
