@@ -16,7 +16,6 @@ import { Feather } from '@expo/vector-icons';
 import Header from '../../components/Header';
 import SliderItem from '../../components/SliderItem';
 
-
 function Home() {
     return (
         <Container>
