@@ -54,7 +54,7 @@ export const BannerButton = styled.TouchableOpacity`
 
 
 export const Banner = styled.Image`
-    height: 150px;
+    height: 200px;
     border-radius: 6px;
     margin: 0 14px;
 
