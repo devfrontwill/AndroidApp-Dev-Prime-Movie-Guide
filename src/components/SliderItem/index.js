@@ -2,20 +2,18 @@ import React from 'react';
 import { Container, BannerItem, Title, RateContainer, Rate } from './style';
 import { Ionicons } from '@expo/vector-icons';
 
-function SliderItem() {
+function SliderItem({ data }) {
     return (
         <Container activeOpacity={0.8} >
             <BannerItem
                 
-                source={{ uri: 'https://presleyson.com.br/wp-content/uploads/2019/02/mr-robot-1200x630-min.jpg' }}
+                source={{ uri: `https://image.tmdb.org/t/p/original/${data.poster_path}` }}
             />
 
-            <Title numberOfLines={1} > Mr Robot </Title>
+            <Title numberOfLines={1} > {data.title} </Title>
             <RateContainer>
                 <Ionicons name="md-star" size={12} color="#E7A74e" />
-                <Rate>
-                    9/10
-                </Rate>
+                <Rate> {data.vote_average}/10 </Rate>
             </RateContainer>
         </Container>
     )

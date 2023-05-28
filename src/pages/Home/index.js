@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView } from 'react-native';
-import { 
-    Container, 
-    SearchContainer, 
-    Input, 
-    SearchButton, 
-    Title, 
-    BannerButton, 
+import { ScrollView, ActivityIndicator } from 'react-native';
+import {
+    Container,
+    SearchContainer,
+    Input,
+    SearchButton,
+    Title,
+    BannerButton,
     Banner,
     SliderMovie
 } from './styles';
@@ -16,15 +16,90 @@ import { Feather } from '@expo/vector-icons';
 import Header from '../../components/Header';
 import SliderItem from '../../components/SliderItem';
 
+import api, { key } from '../../services/api';
+import { getListMovies, randomBanner } from '../../utils/movies';
+
 function Home() {
+
+    const [nowMovies, setNowMovies] = useState([]);
+    const [popularMovies, setPopularMovies] = useState([]);
+    const [topMovies, setTopMovies] = useState([]);
+    const [bannerMovie, setBannerMovie] = useState({});
+    const [loading, setLoading] = useState(true);
+
+
+
+    useEffect(() => {
+        let isActive = true;
+        const ac = new AbortController();
+
+        async function getMovies() {
+            const [nowData, popularData, topData] = await Promise.all([
+                api.get('/movie/now_playing', {
+                    params: {
+                        api_key: key,
+                        language: 'pt-BR',
+                        page: 1,
+                    }
+                }),
+
+                api.get('/movie/popular', {
+                    params: {
+                        api_key: key,
+                        language: 'pt-BR',
+                        page: 1,
+                    }
+                }),
+
+                api.get('/movie/top_rated', {
+                    params: {
+                        api_key: key,
+                        language: 'pt-BR',
+                        page: 1,
+                    }
+                })
+            ])
+
+            if (isActive) {
+                const nowList = getListMovies(10, nowData.data.results);
+                const popularList = getListMovies(10, popularData.data.results);
+                const topList = getListMovies(10, topData.data.results);
+
+                setBannerMovie(nowData.data.results[randomBanner(nowData.data.results)])
+
+                setNowMovies(nowList);
+                setPopularMovies(popularList);
+                setTopMovies(topList);
+                setLoading(false);
+            }
+
+        }
+
+        getMovies();
+
+        return () => {
+            isActive = false;
+            ac.abort();
+        }
+
+    }, [])
+
+    if (loading) {
+        return (
+            <Container>
+                <ActivityIndicator size="large" color="FFF" />
+            </Container>
+        )
+    }
+
     return (
         <Container>
             <Header title="Dev Prime </>" />
 
             <SearchContainer>
-                <Input 
-                placeholder="Ex: Vingadores"
-                placeholderTextColor="#ddd"
+                <Input
+                    placeholder="Ex: Vingadores"
+                    placeholderTextColor="#ddd"
                 />
                 <SearchButton>
                     <Feather name='search' size={30} color="#FFF" />
@@ -34,40 +109,43 @@ function Home() {
             <ScrollView showsVerticalScrollIndicator={false} >
                 <Title>Em cartaz</Title>
 
-                <BannerButton activeOpacity={0.8} onPress={ () => alert('KamehameHaaa') } >
+                <BannerButton activeOpacity={0.8} onPress={ () => alert('KamehameHaaa')} >
                     <Banner
                         resizeMethod="resize"
-                        source={{ uri: 'https://maissuperior.com/wp-content/uploads/2023/02/vdsffs.jpg' }}
+                        source={{ uri: `https://image.tmdb.org/t/p/original/${bannerMovie.poster_path}` }}
                     />
                 </BannerButton>
 
-                <SliderMovie 
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                data={[1,2,3,4]}
-                renderItem={ ({ item }) => <SliderItem /> }
+                <SliderMovie
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    data={nowMovies}
+                    renderItem={({ item }) => <SliderItem data={item} />}
+                    keyExtractor={(item) => String(item.id)}
                 />
 
                 <Title> Populares </Title>
 
-                <SliderMovie 
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                data={[1,2,3,4]}
-                renderItem={ ({ item }) => <SliderItem /> }
+                <SliderMovie
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    data={popularMovies}
+                    renderItem={({ item }) => <SliderItem data={item} />}
+                    keyExtractor={(item) => String(item.id)}
                 />
 
                 <Title> Mais votados </Title>
 
-                <SliderMovie 
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-                data={[1,2,3,4]}
-                renderItem={ ({ item }) => <SliderItem /> }
+                <SliderMovie
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    data={topMovies}
+                    renderItem={({ item }) => <SliderItem data={item} />}
+                    keyExtractor={(item) => String(item.id)}
                 />
 
             </ScrollView>
-            
+
         </Container>
     )
 }

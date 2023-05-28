@@ -23,9 +23,9 @@ export const Input = styled.TextInput`
     width: 85%;
     height: 50px;
     border-radius: 50px;
-    padding: 9px 15px;
+    padding: 8px 15px;
     font-size: 18px;
-    color: #FFF;
+    color: #fff;
 
 `;
 
@@ -50,14 +50,13 @@ export const Title = styled.Text`
 
 export const BannerButton = styled.TouchableOpacity`
 
-
 `;
 
 
 export const Banner = styled.Image`
-    height: 180px;
+    height: 150px;
     border-radius: 6px;
-    margin: 0 4px;
+    margin: 0 14px;
 
 `;
 
