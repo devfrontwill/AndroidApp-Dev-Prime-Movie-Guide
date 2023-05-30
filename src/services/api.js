@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-// URL FILMES EM CARTAZ:
-// https://api.themoviedb.org/3 (URL-BASE)
+// URL FILMES EM CARTAZ
+// https://api.themoviedb.org/3/
 
-// trending/movie/day  ?api_key=93266ac1262b0ebcca5932e384f6dbbb  &language=pt-BR  &page=1
+// movie/now_playing &language=pt-BR &page=1
 
-export const key = '93266ac1262b0ebcca5932e384f6dbbb'
+export const key = 'b77719a2b75267654655415eb6111a49'
 
 const api = axios.create({
     baseURL: 'https://api.themoviedb.org/3'

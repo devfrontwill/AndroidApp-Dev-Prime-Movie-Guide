@@ -2,21 +2,19 @@ import React from 'react';
 
 import { Feather } from '@expo/vector-icons';
 
-import { Container, MenuButton, Title } from './style';
+import { Container, MenuButton, Title} from './styles';
 import { useNavigation } from '@react-navigation/native';
 
-function Header({ title }) {
+function Header({ title }){
 
     const navigation = useNavigation();
 
-    return (
+    return(
         <Container>
-            <MenuButton onPress={() => navigation.openDrawer()} >
-                <Feather name='menu' size={36} color='#FFF' />
+            <MenuButton onPress={ () => navigation.openDrawer()} >
+                <Feather name="menu" size={36} color="#FFF"/>
             </MenuButton>
-
-            <Title> {title} </Title>
-
+            <Title>{title}</Title>
         </Container>
     )
 }

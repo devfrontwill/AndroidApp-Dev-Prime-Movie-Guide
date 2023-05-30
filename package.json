@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^18.0.1",
+    "@react-native-async-storage/async-storage": "^1.18.1",
     "@react-navigation/drawer": "^6.6.2",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
@@ -25,6 +26,7 @@
     "react-native-screens": "~3.20.0",
     "react-native-stars": "^1.2.2",
     "react-native-web": "~0.18.10",
+    "react-native-webview": "^12.1.0",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
