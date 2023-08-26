@@ -16,7 +16,7 @@ export async function getMoviesSave(key){
 export async function saveMovie(key, newMovie){
     let moviesStored = await getMoviesSave(key);
 
-    //Se tiver algum filme com esse mesmo ID / ou dublicado precisamos ignorar.
+    //Se tiver algum filme com esse mesmo ID / ou duplicado precisamos ignorar.
     const hasMovie = moviesStored.some( item => item.id === newMovie.id )
 
     if(hasMovie){
