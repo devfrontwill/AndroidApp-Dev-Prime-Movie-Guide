@@ -114,11 +114,11 @@ function Home() {
 
     return (
         <Container>
-            <Header title='Dev <Prime />' />
+            <Header title= 'Dev <Prime />' />
 
             <SearchContainer>
                 <Input
-                    placeholder="Ex: John Wick"
+                    placeholder="Ex: O Poderoso Chefao"
                     placeholderTextColor="#ddd"
                     value={input}
                     onChangeText={(text) => setInput(text)}

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
-    background-color: #141a29;
+    background-color: #1b1b1b;
     flex: 1;
     padding: 4px 0;
 
@@ -38,7 +38,7 @@ export const Title = styled.Text`
     padding-bottom: 8px;
     font-size: 24px;
     font-weight: bold;
-    color: #FFF;
+    color: #FF0000;
     padding-left: 14px;
     padding-right: 14px;
 `;

@@ -3,7 +3,7 @@
     "name": "app-movies",
     "slug": "app-movies",
     "version": "1.0.0",
-    "orientation": "fullscreen",
+    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#080808"
-      }
+      },
+      "package": "com.devfrontwill.appmovies"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "15a7c17c-3cb5-4a71-8fe0-4aacb5551cda"
+      }
     }
   }
 }

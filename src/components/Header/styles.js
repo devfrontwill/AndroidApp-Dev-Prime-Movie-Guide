@@ -14,9 +14,9 @@ export const MenuButton = styled.TouchableOpacity`
 `;
 
 export const Title = styled.Text`
-    color: #FFF;
+    color: #FF0000;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 14px;
+    margin-left: 50px;
 
 `;

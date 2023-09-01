@@ -9,24 +9,24 @@ import { getMoviesSave, deleteMovie } from '../../utils/storage';
 import FavoriteItem from '../../components/FavoriteItem';
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 
-function Movies(){
+function Movies() {
     const navigation = useNavigation();
     const isFocused = useIsFocused();
 
     const [movies, setMovies] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         let isActive = true;
 
-        async function getFavoriteMovies(){
+        async function getFavoriteMovies() {
             const result = await getMoviesSave('@primereact');
 
-            if(isActive){
+            if (isActive) {
                 setMovies(result);
             }
         }
 
-        if(isActive){
+        if (isActive) {
             getFavoriteMovies();
         }
 
@@ -37,32 +37,32 @@ function Movies(){
     }, [isFocused]);
 
 
-    async function handleDelete(id){
+    async function handleDelete(id) {
         const result = await deleteMovie(id);
         setMovies(result);
     }
 
-    function navigateDetailsPage(item){
-        navigation.navigate('Detail', {id: item.id })
+    function navigateDetailsPage(item) {
+        navigation.navigate('Detail', { id: item.id })
     }
 
 
 
-    return(
+    return (
         <Container>
-            <Header title="Meus filmes"/>
+            <Header title="Meus filmes" />
 
             <ListMovies
-             showsVerticalScrollIndicator={false}
-             data={movies}
-             keyExtractor={ item => String(item.id)}
-             renderItem={ ({item}) => (
-                <FavoriteItem
-                 data={item}
-                 deleteMovie={ handleDelete }
-                 navigatePage={ () => navigateDetailsPage(item) }
-                />
-             )}
+                showsVerticalScrollIndicator={false}
+                data={movies}
+                keyExtractor={item => String(item.id)}
+                renderItem={({ item }) => (
+                    <FavoriteItem
+                        data={item}
+                        deleteMovie={handleDelete}
+                        navigatePage={() => navigateDetailsPage(item)}
+                    />
+                )}
             />
         </Container>
     )
