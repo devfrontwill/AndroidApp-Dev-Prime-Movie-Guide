@@ -10,7 +10,7 @@ function FavoriteItem({ data, deleteMovie, navigatePage }){
 
             <RateContainer>
                 <Ionicons name="md-star" size={12} color="#E7A74e" />
-                <Rate>{data.vote_average}/10</Rate>
+                <Rate>{data.vote_average.toFixed(1)}/10</Rate>
             </RateContainer>
 
             <ActionContainer>

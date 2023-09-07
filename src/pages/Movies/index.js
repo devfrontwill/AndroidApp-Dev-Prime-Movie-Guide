@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
 import Header from '../../components/Header';
 
 import { Container, ListMovies } from './styles';
