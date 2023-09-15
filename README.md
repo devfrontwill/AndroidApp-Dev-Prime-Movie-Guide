@@ -12,6 +12,7 @@
 
   ![splash](https://github.com/devfrontwill/movies-app/assets/106280899/ac2b215a-555b-4cce-bedc-63e6aec65917)
 
+
 ## 💻 Sobre o projeto
 
 :film_projector::clapper: O DevPrime Movie Guide, é um app que lista para o usuário algumas listas de filmes classificadas em três diferentes categorias, são elas: Filmes em cartaz, Filmes Populares e Filmes mais votados ou seja os melhores avaliados pela Movie DB.
@@ -20,32 +21,49 @@ Este app serve para aquela pessoa que busca assistir algo em sua plataforma de s
 *Aplicativo com fins didáticos, sendo o primeiro publicado por este desenvolvedor que vos redige esta descrição* .
 
  ### Tela inicial do App, mostrando os filmes em Cartaz e os Populares, uma barra de busca com um menu hamburguer lateral :
- <img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/f5afedab-b86c-4184-b2bd-879da11a0d07"  />
+  <div align="center">
+ 	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/f5afedab-b86c-4184-b2bd-879da11a0d07"  />
+  </div>
 
 ### Parte inferior da tela inicial que mostra a categoria de Mais votados :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/61abb345-ca21-403c-8861-9c5e5d65661a" />
-
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/61abb345-ca21-403c-8861-9c5e5d65661a" />
+ </div>
+ 
 ### Mostra a tela de detalhes de um filme especifico onde o usuário consegue ver o rankeamento do filme, genero, sua sinopse e um botão para poder compartilhar onde desejar :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/f7c3a4d4-7ce1-4297-b3ad-e8188cba45d9" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/f7c3a4d4-7ce1-4297-b3ad-e8188cba45d9" />
+ </div>
 
 ### Nesta tela o app mostra a mensagem após a ação do usuário ao clicar para salvar o filme em sua lista de favoritos :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/df9522ac-e9ec-4b4e-b7ad-e82504ddeffd" />
-
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/df9522ac-e9ec-4b4e-b7ad-e82504ddeffd" />
+ </div>
 
 ### Nesta tela o app mostra a mensagem após a ação do usuário ao clicar para remover o filme de sua lista de favoritos :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/1078f271-a0fe-411e-8f32-3477f9b93083" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/1078f271-a0fe-411e-8f32-3477f9b93083" />
+ </div>
 
 ### Nesta tela mostro ao usuário a barra de pesquisa do App :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/aee71690-b74d-4dc7-b668-67be99b45330" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/aee71690-b74d-4dc7-b668-67be99b45330" />
+ </div>
 
 ### Após digitar o nome do filme que deseja encontrar na barra de pesquisa e ao clicar na lupa, o usuário vai para esta tela, que mostra o resultado de sua busca :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/f0c46c48-04b0-473e-8320-026edd9d72dc" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/f0c46c48-04b0-473e-8320-026edd9d72dc" />
+ </div>
 
 ### Menu lateral aberto mostrando as opções que o App possui :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/91c75ccc-ecf1-454c-b70a-1e416d21392d" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/91c75ccc-ecf1-454c-b70a-1e416d21392d" />
+ </div>
 
 ### Nesta tela é exibida para o usuário os filmes que o mesmo salvou como favorito em sua lista, podendo acessar os detalhes e também excluir com apenas um clique na lixeira :
-<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/4c907c28-0fb0-4905-a369-25d6ce13fe32" />
+ <div align="center">
+	<img style="width:350px;" src="https://github.com/devfrontwill/movies-app/assets/106280899/4c907c28-0fb0-4905-a369-25d6ce13fe32" />
+ </div>
 
 ---
 
